@@ -205,7 +205,7 @@ ul {
 }
 
 .blog-input--more {
-  .button {
+  button {
     display: flex;
     width: 120px;
     height: 40px;
@@ -214,24 +214,96 @@ ul {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    border-style: 2px solid #000;
-    background-color: rgb(173, 173, 164);
+    border-style: 1px solid #000;
+    background-color: rgb(233, 241, 239);
     cursor: pointer;
-    padding: 10px 20px 10px 15px;
+    padding: 5px 5px 5px 15px;
     margin-bottom: 40px;
   }
 }
 
 .footer {
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  .footer-privacy {
+    padding-right: 200px;
+  }
+
+  .footer__nav {
+    width: 350px;
+    a.item-link {
+      font-size: 18px;
+      font-weight: 600;
+      padding-top: 5px;
+      padding-right: 0px;
+    }
+    img {
+      padding-right: 00px;
+    }
+  }
+}
+
+.flex-container {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.flex-item {
+  display: inline-flex;
   margin-bottom: 40px;
-  .container--wide {
-    margin: 0 auto;
-    max-width: 1060px;
-    width: 100%;
+  ul {
+    display: inline-block;
   }
-  .footer-privacy{
-    padding-right: 760px;
+  img {
+    height: 100px;
+    padding: 5px 1px 5px 1px;
   }
+}
+
+.btn-group{
+   display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+  text-align: center; 
+}
+
+.btn-group button {
+    font-size: 20px;
+    line-height: 18px;
+    background-color: rgb(233, 241, 239); /* Green background */
+    // border: 1px solid rgb(128, 134, 128);
+    border-style: 1px solid #000;
+    color: rgb(22, 20, 20); /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #d0dbd0;
 }
 
 @import "media";
