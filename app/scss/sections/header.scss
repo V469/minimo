@@ -1,0 +1,29 @@
+.header {
+    padding-top: 55px;
+    padding-bottom: 80px;
+  }
+  
+  .header__logo {
+    font-size: 60px;
+  }
+  
+  .header__nav-list {
+    width: 570px;
+  
+    .item {
+      .item-link {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+
+
+/*
+
+TO DO 
+
+1.Сделать каждую букву логотипа заглавной(uppercase)
+
+
+*/

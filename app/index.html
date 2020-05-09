@@ -38,18 +38,42 @@
             </nav>
         </div>
     </header>
-    <section>
+<!-- 
+    я добавил этой секции класс "intro"
+    Все классы внутри секции должны обладать
+    приставкой .intro__название класса
+    В этот список не попадают:
+    1. Служебные классы
+    2. самодостаточные блоки, которые можно использовать в других местах
+
+    Нужно:
+    1. Дать наименование каждой секции согласно тому, о чем эта секция -->
+    <!-- 2. Реиспользовать служебные классы, для контейнера секций уже написан класс 'container--wide',
+     который ограничивает и центрирует контент, нужно заменить контейнера в секциях на container--wide,
+     а там, где более узкий контейнер, нужно использовать класс container--narrow -->
+
+
+    <section class="intro">
         <div class="content-box">
             <div class="content__bg">
                 <img src="img/rettangolo-bg.jpg" alt="">
             </div>
-            <div class="content__bg-name">
+        </div>
+
+
+        <!-- контейнер был на высоту всей секции, но у второй части секции(для текста под картинкой) есть контейнер своей ширины
+        Нужно написать класс контейнера container--narrow и реиспользовать его в тех местах, где нужно ограничить контент в эту ширину -->
+
+
+        <!-- На следующей строчке как раз для примера использовал нужный класс контейнера -->
+        <div class="container--narrow">
+            <div class="post__theme">
                 photodiary
             </div>
-            <div class="content__bg-title">
+            <div class="post__title--intro">
                 The perfect weekend getaway
             </div>
-            <div class="content__bg-content--1">
+            <div class="post__text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -69,13 +93,33 @@
                 tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
             </div>
         </div>
+            
+        
     </section>
 
     <section>
         <div class="coment-box">
+<!-- 
+            coment-box__title относится к тексту внутри секции intro
+            то есть по смыслу нужно оставить комментарий к посту, значит этот элемент должен находиться там, а не в этой секции -->
             <div class="coment-box__title">
                 Leave a comment
             </div>
+
+
+<!-- 
+            coment-box__item по своей сущности является списком для статей, поэтому ему нужно подобрать класс,
+             который будет описывать то, что внутри этого div находится список постов
+             
+             еще нужно заменить тег div на семантичный тег <ul></ul>, который говорит о том, что это список
+             Внутри этого тега должны находться элементы списка <li></li>, то есть ul.post-list > li.post-item  
+
+
+            Что бы оттолкнуть статьи между собой, нужно сделать этот список флекс контейнером,
+             потом написать правило, которое разрешит перенос(wrap) внутри этого контейнера, и добавить правило,
+            которое будет отталкивать посты друг от друга на равное расстояние
+            Попробуй дописать те правила, которых будет не доставать
+-->
             <div class="coment-box__item">
                 <div class="coment-box__item-left">
                     <img src="img/item-left-1.jpg" alt="">
